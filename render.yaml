@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: led-drone-replacement-sim
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
